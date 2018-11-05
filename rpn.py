@@ -8,8 +8,29 @@ operators = {
     '-': operator.sub,
     '*': operator.mul,
     '/': operator.truediv,
-    '^': operator.pow
+    '^': operator.pow,
+#    '%': operator.mod
 }
+
+def print_som_stuff():
+    print("HEllo")
+    print("it is me my firend")
+    print("HEllo")
+    print("HEllo")
+    print("HEllo")
+    print("HEllo")
+    print("HEllo")
+    print("HEllo")
+    print("HEllo")
+    print("HEllo")
+    print("it is me my firend")
+    print("it is me my firend")
+    print("it is me my firend")
+    print("it is me my firend")
+    print("it is me my firend")
+    print("it is me my firend")
+    print("it is me my firend")
+    print("it is me my firend")
 
 def calculate(myarg):
     stack = list()
