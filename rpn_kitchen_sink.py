@@ -186,6 +186,7 @@ class IntegerCalculator(Calculator):
     def coerce_number(self, operand):
         return int(operand)
 
+from colored import fg, bg, attr
 
 def main():
     calculator = IntegerCalculator() if args.disable_floats else Calculator()
@@ -202,7 +203,14 @@ def main():
                 continue
 
             if args.echo:
-                print(to_calculate)
+                for c in to_calculate.split():
+                    if(len(c) != 1 and c[0] == '-'):
+                        print("%s%s%s" % (fg('red'), c, attr('reset')), end=' ')
+                    elif(ord(c[0]) >= ord('0') and ord(c[0]) <= ord('9') ):
+                        print("%s%s%s" % (fg('white'), c, attr('reset')), end=' ')
+                    else:
+                        print("%s%s%s" % (fg('yellow'), c, attr('reset')), end=' ')
+                print("")
 
             # 'q'uit
             if to_calculate[0] == 'q':
