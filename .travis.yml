@@ -4,3 +4,14 @@ python:
 
 script:
   - python3 -m unittest
+
+before_script:
+  - pip3 install coveralls
+  - pip3 install pytest
+  - pip3 install pytest-pep8
+  - pip3 install pytest-cov
+
+
+after_success:
+  - coveralls 
+
